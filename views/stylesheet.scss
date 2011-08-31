@@ -1,0 +1,113 @@
+body {
+  /* IE10 */ 
+  background-image: -ms-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  /* Opera */ 
+  background-image: -o-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF3ED), color-stop(1, #7A6B5C));
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+
+  #content {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .meddon {
+    font-family: 'Meddon', cursive;
+  }
+
+  .calligraffitti {
+    font-family: 'Calligraffitti', cursive;
+  }
+
+  h1#formal-invitation {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+
+  .blockparty {
+    font-weight: bold;
+  }
+  .bigamp {
+    color: red;
+    font-size: 38px;
+  }
+
+  #invitation {
+    font-size:35px;
+  }
+
+  #sponsor-header {
+    text-align:center;
+  }
+  ul#sponsors {
+    width:600px;
+    padding-left: 180px;
+    li.sponsor {
+      display: inline;
+      font-size: 25px;
+      padding-bottom:15px;
+      width:200px;
+      img#github-logo {
+        height: 50px;
+      }
+    }
+    li#engine-yard, li#github{
+      float: left;
+    }
+  }
+
+  #what {
+    clear: both;
+  }
+  #libations {
+    font-size: 100%;
+  }
+
+  #food {
+    padding-left: 300px;
+  }
+
+  #music {
+    padding-left: 600px;
+  }
+
+  #trombone {
+    #get {
+      padding-left: 600px;
+    }
+    #your {
+      padding-left: 525px;
+    }
+    #face {
+      padding-left: 450px;
+    }
+    #trom {
+      padding-left: 375px;
+    }
+    #boned {
+      padding-left: 300px;
+    }
+    #off {
+      padding-left: 225px;
+    }
+    #bangs {
+      padding-left: 150px;
+    }
+  }
+
+  #get-there-map, #get-back-map {
+    border: thin solid black;
+    height: 400px;
+    width: 800px;
+  }
+
+  #twitter-block {
+    border: thin solid black;
+    height: 100px;
+    width: 800px;
+  }
+}

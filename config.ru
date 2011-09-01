@@ -1,3 +1,6 @@
-require './lib/app'
+$:.unshift "lib"
 
-run AmpBlock
+require "bundler/setup"
+require "amp/block"
+
+run Amp::Block

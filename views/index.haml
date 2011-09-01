@@ -73,6 +73,39 @@
         #other-opinions-answer
           Ask those tweetie things!
           #twitter-block
+            %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
+            :javascript
+              new TWTR.Widget({
+                version: 2,
+                type: 'search',
+                search: 'rubyconf',
+                interval: 30000,
+                title: 'Goings-on about the town',
+                subject: 'Whoos...Wh..what?',
+                width: 800,
+                height: 100,
+                theme: {
+                  shell: {
+                    background: '#8ec1da',
+                    color: '#ffffff'
+                  },
+                  tweets: {
+                    background: '#ffffff',
+                    color: '#444444',
+                    links: '#1985b5'
+                  }
+                },
+                features: {
+                  scrollbar: false,
+                  loop: true,
+                  live: true,
+                  hashtags: true,
+                  timestamp: true,
+                  avatars: true,
+                  toptweets: true,
+                  behavior: 'default'
+                }
+              }).render().start();
       #woo
         Wooooo!
         #woo-answer

@@ -9,10 +9,6 @@ class AmpBlock < Sinatra::Base
     haml :index
   end
 
-  get '/awesome' do
-    haml :awesome
-  end
-
   get '/stylesheet.css' do
     scss :stylesheet
   end

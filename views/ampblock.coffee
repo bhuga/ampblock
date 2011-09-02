@@ -23,7 +23,22 @@ $(document).ready () ->
     if status == google.maps.DirectionsStatus.OK
       toDirs.setDirections(response)
 
-  fromWaypoints = ['camp at girod', 'bourbon at canal', 'tulane university medical center']
+  fromWaypoints = ['camp at girod',
+                   'bourbon at bienville',
+                   "29.947813818327635, -90.06422281265259",
+                   "29.943630383305713, -90.07188320159912",
+                   "29.94987758145139, -90.07184028625488",
+                   "29.944597237256357, -90.06566047668457",
+                   "royal street and governor nicholls",
+                   'tulane university medical center']
+  waypointNames = ['THE PARTY!',
+                   'HAY LADIES!',
+                   "Velociraptor attack.",
+                   "CHUG CHUG CHUG",
+                   "Dude, we're so lost...",
+                   "I'm getting hungry",
+                   "24 hour Poboys! YES!",
+                   "It hurts."]
   googleWaypoints = ({location: waypoint} for waypoint in fromWaypoints[1..fromWaypoints.length-2])
   fromRoute =
     origin: fromWaypoints[0]
@@ -35,7 +50,7 @@ $(document).ready () ->
     if status == google.maps.DirectionsStatus.OK
       index = 0
       while(index < response.routes[0].legs.length)
-        response.routes[0].legs[index].start_address = fromWaypoints[index]
-        response.routes[0].legs[index].end_address = fromWaypoints[index+1]
+        response.routes[0].legs[index].start_address = waypointNames[index]
+        response.routes[0].legs[index].end_address = waypointNames[index+1]
         index += 1
       fromDirs.setDirections(response)

@@ -13,6 +13,23 @@ body {
   #content {
     width: 960px;
     margin: 0 auto;
+
+    h3.question {
+      font-family: 'Calligraffitti', cursive;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .answer {
+      margin-left: 40px;
+      width:700px;
+      #get-there-map {
+        height: 275px;
+      }
+      #get-back-map {
+        height: 350px;
+      }
+    }
   }
 
   .meddon {
@@ -99,14 +116,8 @@ body {
     }
   }
 
-  #get-there-map, #get-back-map {
-    border: thin solid black;
-    height: 400px;
-    width: 800px;
-  }
 
   #twitter-block {
-    height: 100px;
     width: 800px;
   }
 }

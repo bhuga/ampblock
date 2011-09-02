@@ -59,63 +59,71 @@
           #boned boned
           #off off
           #bangs !!
-      #when
-        When?
-        #when-answer
-          It's at Rubyconf, bra--err, fine sir! It starts after the conference ends on Thursday!
-      #where
-        Where?
-        #where-answer
-          It's a straight line from the conference hotel! You can't miss it!
+      %h3.question When?
+      #when-answer.answer
+        The Southern Louisiana Analytical Engine & Pleasurable Beverage
+        Society are proud to present the &Block Party to attendees of the
+        esteemed RubyConf in fine New Orleans!  Our soirée will take place on
+        %strong the first Thursday of Rubyconf!
+        That's
+        %strong September 29th!
+        The party begins
+        %strong around 6:30!
+      %h3.question Where?
+      #where-answer.answer
+        The Southern Louisiana Analytical Engine & Pleasurable Bevreage Society
+        have reserved a delightful grotto for your post-conference enjoyment.
+        It's like, a straight shot from the conference, and in the heart of
+        New Orleans' own entrpreneurial community! You can find it pretty
+        easily with the map below.
         #get-there-map
-      #other-opinions
-        What other opinions mind I find on the subject of this celebrashun?
-        #other-opinions-answer
-          Ask those tweetie things!
-          #twitter-block
-            %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
-            :javascript
-              new TWTR.Widget({
-                version: 2,
-                type: 'search',
-                search: 'rubyconf',
-                interval: 30000,
-                title: 'Goings-on about the town',
-                subject: 'Whoos...Wh..what?',
-                width: 800,
-                height: 100,
-                theme: {
-                  shell: {
-                    background: '#8ec1da',
-                    color: '#ffffff'
-                  },
-                  tweets: {
-                    background: '#ffffff',
-                    color: '#444444',
-                    links: '#1985b5'
-                  }
+      %h3.question What are other fine gentlemen and ladies saying?
+      #other-opinions-answer.answer
+        The Southern Louisiana Analytical Engine & Pleasurable Beverage Society
+        would never speak for our delightful guests! Why don't you ask them,
+        using this godforsaken Twitter thing that is just completely destroying
+        what it means to have a traditional discuorse?
+        #twitter-block
+          %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
+          :javascript
+            new TWTR.Widget({
+              version: 2,
+              type: 'search',
+              search: 'ampblock',
+              interval: 30000,
+              title: 'Goings-on about the town',
+              subject: 'Whoos...Wh..what?',
+              width: 800,
+              height: 100,
+              theme: {
+                shell: {
+                  background: '#8ec1da',
+                  color: '#ffffff'
                 },
-                features: {
-                  scrollbar: false,
-                  loop: true,
-                  live: true,
-                  hashtags: true,
-                  timestamp: true,
-                  avatars: true,
-                  toptweets: true,
-                  behavior: 'default'
+                tweets: {
+                  background: '#ffffff',
+                  color: '#444444',
+                  links: '#1985b5'
                 }
-              }).render().start();
-      #woo
-        Wooooo!
-        #woo-answer
-          Yeah, wooo!
-      #how-long
-        How long does it last?
-        #how-long-answer
-          Until they cops kick us out!
-      #lost
-        How do I get home?
-        #lost-answer
-          Man...uhh...I think its this way...
+              },
+              features: {
+                scrollbar: false,
+                loop: true,
+                live: true,
+                hashtags: true,
+                timestamp: true,
+                avatars: true,
+                toptweets: true,
+                behavior: 'default'
+              }
+            }).render().start();
+      %h3.question How long does it last?
+      #how-long-answer.answer
+        The Southrn Louisana Analitic Engine & Pleasured Beverage Society is proud to announce that we've got like, two freaking bands and freakin' DJ Black Socks, so like, a long time. Shoutouts to band 1 and band 2!
+      %h3.question Woooo!
+      #woo-answer.answer
+        The south louisiana whatever is fucking psyched to say: yeah, wooo! I love you guys!
+      %h3.question How Do I get home?
+      #lost-answer.answer
+        pretty sure like this! follow me!
         #get-back-map

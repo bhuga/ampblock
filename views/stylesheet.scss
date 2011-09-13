@@ -1,17 +1,108 @@
 body {
-  /* IE10 */ 
+  /* IE10 */
   background-image: -ms-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
-  /* Mozilla Firefox */ 
+  /* Mozilla Firefox */
   background-image: -moz-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
-  /* Opera */ 
+  /* Opera */
   background-image: -o-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
-  /* Webkit (Safari/Chrome 10) */ 
+  /* Webkit (Safari/Chrome 10) */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF3ED), color-stop(1, #7A6B5C));
-  /* Webkit (Chrome 11+) */ 
+  /* Webkit (Chrome 11+) */
   background-image: -webkit-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
 
+  #banner {
+    margin: 0 auto;
+    text-align: center;
+    #name {
+      height: 80px;
+      font-size: 20px;
+      #logo {
+        margin: 0 auto;
+        font-family: 'Meddon', cursive;
+        #society, #coat-of-arms, #libationists {
+          float: right;
+        }
+        #society {
+          padding-right: 20px;
+        }
+        #libationists {
+          padding-left: 20px;
+          margin-right: 110px;
+        }
+      }
+    }
+    #break {
+      margin: 0 auto;
+      width: 80%;
+      height: 4px;
+      background-color: #cfcfcf;
+    }
+    #presents {
+      margin: 0 auto;
+      width: 80%;
+      position: relative;
+      height: 145px;
+      #verily {
+        margin-left: 315;
+        text-align: center;
+        position: absolute;
+        top: 85px;
+      }
+      #right-wrap, #left-wrap {
+        position: absolute;
+        top: 0px;
+      }
+      #right-wrap {
+        right: 0px;
+      }
+      #left-wrap {
+        left: 0px;
+      }
+    }
+  }
+
+  #block-party {
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+  }
+
+  #invitation {
+    padding-top: 30px;
+    width: 85%;
+    margin: 0 auto;
+    font-size:18px;
+    text-align: center;
+    #dapper-left {
+      float: left;
+      padding-right: 40px;
+    }
+    #dapper-right {
+      float: right;
+      padding-left: 40px;
+    }
+  }
+
+  #images {
+    height: 260px;
+    clear: both;
+    margin-top: 60px;
+    text-align: center;
+    #food, #music, #libations {
+      width: 321px;
+      display: inline-block;
+      display: -moz-inline-stack;
+      img {
+        border: solid #cfcfcf 10px;
+      }
+    }
+  }
+  #twitter-block {
+    width: 800px;
+  }
+
   #content {
-    width: 960px;
+    width: 1024px;
     margin: 0 auto;
 
     h3.question {
@@ -30,94 +121,5 @@ body {
         height: 350px;
       }
     }
-  }
-
-  .meddon {
-    font-family: 'Meddon', cursive;
-  }
-
-  .calligraffitti {
-    font-family: 'Calligraffitti', cursive;
-  }
-
-  h1#formal-invitation {
-    font-size: 50px;
-    margin-bottom: 0px;
-  }
-
-  .blockparty {
-    font-weight: bold;
-  }
-  .bigamp {
-    color: red;
-    font-size: 38px;
-  }
-
-  #invitation {
-    font-size:35px;
-  }
-
-  #sponsor-header {
-    text-align:center;
-  }
-  ul#sponsors {
-    width:600px;
-    padding-left: 180px;
-    li.sponsor {
-      display: inline;
-      font-size: 25px;
-      padding-bottom:15px;
-      width:200px;
-      img#github-logo {
-        height: 50px;
-      }
-    }
-    li#engine-yard, li#github{
-      float: left;
-    }
-  }
-
-  #what {
-    clear: both;
-  }
-  #libations {
-    font-size: 100%;
-  }
-
-  #food {
-    padding-left: 300px;
-  }
-
-  #music {
-    padding-left: 600px;
-  }
-
-  #trombone {
-    #get {
-      padding-left: 600px;
-    }
-    #your {
-      padding-left: 525px;
-    }
-    #face {
-      padding-left: 450px;
-    }
-    #trom {
-      padding-left: 375px;
-    }
-    #boned {
-      padding-left: 300px;
-    }
-    #off {
-      padding-left: 225px;
-    }
-    #bangs {
-      padding-left: 150px;
-    }
-  }
-
-
-  #twitter-block {
-    width: 800px;
   }
 }

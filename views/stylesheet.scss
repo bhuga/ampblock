@@ -92,6 +92,11 @@ body {
     font-family: 'IM Fell French Canon', serif;
     font-style: italic;
     line-height: 33px;
+    .super {
+      vertical-align: super;
+      font-size: 50%;
+      line-height: 50%;
+    }
     #dapper-left {
       float: left;
       padding-right: 40px;

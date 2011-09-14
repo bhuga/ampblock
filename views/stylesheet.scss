@@ -1,18 +1,32 @@
 body {
+  margin-top: 0px;
+  margin-bottom: 40px;
+
   /* IE10 */
-  background-image: -ms-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  #background-image: -ms-linear-gradient(top, #FFFFFF 0%, #7A6B5C 100%);
   /* Mozilla Firefox */
-  background-image: -moz-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  #background-image: -moz-linear-gradient(top, #FFFFFF 0%, #7A6B5C 100%);
   /* Opera */
-  background-image: -o-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  #background-image: -o-linear-gradient(top, #FFFFFF 0%, #7A6B5C 100%);
   /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF3ED), color-stop(1, #7A6B5C));
+  #background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #7A6B5C));
   /* Webkit (Chrome 11+) */
-  background-image: -webkit-linear-gradient(top, #FFF3ED 0%, #7A6B5C 100%);
+  #background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #7A6B5C 100%);
+
+  #break {
+    width: 100%;
+    height: 81px;
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0px 1px 4px 2px #eee;
+  }
 
   #banner {
     margin: 0 auto;
     text-align: center;
+    position:relative;
+    #height: px;
     #name {
       height: 80px;
       font-size: 20px;
@@ -20,28 +34,28 @@ body {
         margin: 0 auto;
         font-family: 'Meddon', cursive;
         #society, #coat-of-arms, #libationists {
-          float: right;
+          position:absolute;
         }
         #society {
-          padding-right: 20px;
+          left:250;
+          top: 25px;
         }
         #libationists {
-          padding-left: 20px;
-          margin-right: 110px;
+          left: 595px;
+          top: 25px;
+        }
+        #coat-of-arms {
+          left: 464px;
+          top: 0px;
         }
       }
-    }
-    #break {
-      margin: 0 auto;
-      width: 80%;
-      height: 4px;
-      background-color: #cfcfcf;
     }
     #presents {
       margin: 0 auto;
       width: 80%;
       position: relative;
       height: 145px;
+      top:4px;
       #verily {
         margin-left: 315;
         text-align: center;
@@ -73,6 +87,9 @@ body {
     margin: 0 auto;
     font-size:18px;
     text-align: center;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
+    line-height: 33px;
     #dapper-left {
       float: left;
       padding-right: 40px;
@@ -88,12 +105,14 @@ body {
     clear: both;
     margin-top: 60px;
     text-align: center;
+    font-family: 'IM Fell French Canon', serif;
+    font-style: italic;
     #food, #music, #libations {
       width: 321px;
       display: inline-block;
       display: -moz-inline-stack;
       img {
-        border: solid #cfcfcf 10px;
+        border: solid #e1e0e0 10px;
       }
     }
   }
@@ -106,7 +125,8 @@ body {
     margin: 0 auto;
 
     h3.question {
-      font-family: 'Calligraffitti', cursive;
+      font-family: 'IM Fell French Canon', serif;
+      font-style: italic;
       font-size: 40px;
       margin-bottom: 15px;
     }
@@ -114,6 +134,9 @@ body {
     .answer {
       margin-left: 40px;
       width:700px;
+      font-family: 'IM Fell French Canon', serif;
+      font-size: 18px;
+      line-height: 33px;
       #get-there-map {
         height: 275px;
       }
@@ -121,5 +144,9 @@ body {
         height: 350px;
       }
     }
+  }
+
+  #lost-answer {
+    font-family: 'Comic Sans MS';
   }
 }

@@ -1,21 +1,23 @@
 %html
   %head
     %title Formal Invitation to Libate
-    %link{:href => 'http://fonts.googleapis.com/css?family=Meddon|Calligraffitti', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => 'http://fonts.googleapis.com/css?family=IM+Fell+French+Canon:400,400italic', :rel => 'stylesheet', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => 'stylesheet.css', :type => 'text/css' }
     %script{:type => 'text/javascript', :src =>'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'}
     %script{:type => 'text/javascript', :src => 'http://maps.googleapis.com/maps/api/js?sensor=false'}
     %script{:type => 'text/javascript', :src => '/ampblock.js'}
   %body
+    #break
     #content
       #banner
         #name
           #logo
-            #libationists Computational Libationists
+            #society
+              %img{:src => '/images/southern_societe.png'}
             #coat-of-arms
               %img{:src => '/images/coat_of_arms.png'}
-            #society The Southern Societé of
-        #break
+            #libationists
+              %img{:src => '/images/computational_libationists.png'}
         #presents
           #left-wrap
             %img{:src => '/images/left_wrap.png'}
@@ -30,17 +32,12 @@
           %img{:src => '/images/dapper_man_left.png'}
         #dapper-right
           %img{:src => '/images/dapper_man_right.png'}
-        %span
-          The pleasure of your company is requested for a refined and elegant
-          evening of merriment,
+        The pleasure of your company is requested for a refined and elegant
+        evening of merriment,
         %br
-        %span
-          -#rabblerousing, and elegant entertainment. Also some other fancy words would go
-          rabblerousing, and elegant entertainment. The festivities will occur on the
+        rabblerousing, and elegant entertainment. The festivities will occur on the
         %br
-        %span
-          first night of the delightful congress of Rubyists in New Orleans!
-          -#here but I'm not sure exactly which words would be best at the moment.
+        first night of the delightful congress of Rubyists in New Orleans!
       #images
         #music
           %img{:src => '/images/concert.jpg'}
@@ -54,30 +51,71 @@
           %img{:src => '/images/libations.jpg'}
           %br
           Libations, Libations, Libations!
+      %h3.question What is it?
+      #what-answer.answer
+        The Southern Societé of Computational Libationists, the south's most esteemed
+        organization dedicated to the study and mechaniching of analytical
+        enginery and pleasurable potables, founded 1718, has created a league
+        of well-regarded colleagues of local repute and organizations far and
+        wide known for their good deeds and analytic heroics. This league's
+        ephemeral existence has but one purpose: a refined evening of
+        out-of-doors diversion for all enthusiasts of Rubyology, colloquially
+        known as 'The &Block Party', and often verbally pronounced, with no
+        small amount of amusement to those learned in the arts of analytic
+        enginery, as 'amp-block'.
+        %br
+        We have prepared a fine evening of entertainment for you, including
+        %strong scrumptious delights
+        and the Libationists' own
+        %strong pleasurable spirits!
+        To encourage intersocialization and chuckles while you imbibe,
+        have retained the services of
+        %strong The Laginappe Brass Band,
+        the fine
+        %strong My Name Is John Michaels,
+        and the renowned rotater of musical storing discii,
+        %strong DJ Black Socks.
+        It should be a gay time for all!
+
       %h3.question When?
       #when-answer.answer
-        The Southern Louisiana Analytical Engine & Pleasurable Beverage
-        Society are proud to present the &Block Party to attendees of the
-        esteemed RubyConf in fine New Orleans!  Our soirée will take place on
-        %strong the first Thursday of Rubyconf!
-        That's
-        %strong September 29th!
-        The party begins
-        %strong around 6:30!
+        The Southern Societé of Computational Libationists have created a
+        schedule timing The &Block Party to coincide with the rubyologist's
+        festival of analisis and engineering taking place in New Orleans at the
+        close of September. Our soirée will take place on
+        %strong the first Thursday of Rubyconf,
+        September 29th.
+        The diversion, libations, and comestibles will be present nearish to
+        %strong half-past six,
+        and in lieu of a witching-hour close, we have arranged that festivities
+        will continue until all of our gentle guests choose to depart satisfied.
+
       %h3.question Where?
       #where-answer.answer
-        The Southern Louisiana Analytical Engine & Pleasurable Bevreage Society
-        have reserved a delightful grotto for your post-conference enjoyment.
-        It's like, a straight shot from the conference, and in the heart of
-        New Orleans' own entrpreneurial community! You can find it pretty
-        easily with the map below.
+        The Southern Soceitée of Conputational Libationists have carefully
+        prepared the map below as a navigation aide to assist your
+        post-congress quest for comestibles and potables.  A massive effort has
+        ensured that a
+        %strong city block in its entirety
+        will be free of the usual passers-by, auto-mobile vehicles, and other
+        distractions of attention, cleverly and simultaneously making the
+        festivities quite simple to locate.
         #get-there-map
+
+      %h3.question What shall I bring?
+      #what-bring-answer.answer
+        Please, just bring yourself! The &Block Party's possibility is genarously created
+        to you by a number of sponsors, and is completely free to attendees of
+        the Ruby congres
+
       %h3.question What are other fine gentlemen and ladies saying?
       #other-opinions-answer.answer
-        The Southern Louisiana Analytical Engine & Pleasurable Beverage Society
-        would never speak for our delightful guests! Why don't you ask them,
-        using this godforsaken Twitter thing that is just completely destroying
-        what it means to have a traditional discuorse?
+        The Suthern Societé of Computationla Libashunists has a stated poilcy
+        in our charter to encourage socailization and locutive intercourse!
+        Please, see what fine ladies and gentlemen are gossiping of the
+        goings-on, using this godforsaken Twitter thing that is just completely
+        destroying what it means to have a traditional discuorse.
+
         #twitter-block
           %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
           :javascript
@@ -112,13 +150,13 @@
                 behavior: 'default'
               }
             }).render().start();
-      %h3.question How long does it last?
-      #how-long-answer.answer
-        The Southrn Louisana Analitic Engine & Pleasured Beverage Society is proud to announce that we've got like, two freaking bands and freakin' DJ Black Socks, so like, a long time. Shoutouts to band 1 and band 2!
-      %h3.question Woooo!
+      %h3.question Wooooooooooooooooooooooo!
       #woo-answer.answer
-        The south louisiana whatever is fucking psyched to say: yeah, wooo! I love you guys!
-      %h3.question How Do I get home?
+        The southern whatever is like, so fucking psyched to say: yeah, WOOOOO man! I love you guys!
+      %h3.question
+        Woa man i'm like, all tired and i just gotta go call my buds and be all
+        like DUDE YOU SHOULD BE DOWN HERE and I don't really know where I am or
+        whats going on and like, where am I, man?
       #lost-answer.answer
-        pretty sure like this! follow me!
+        dude TOTALLY. Homes back over here man just come like over here and stuff
         #get-back-map

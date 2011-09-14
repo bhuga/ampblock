@@ -8,7 +8,6 @@
     %script{:type => 'text/javascript', :src => '/ampblock.js'}
   %body
     #break
-    #sponsors
     #content
       #banner
         #name
@@ -122,37 +121,37 @@
         that is savaging good and decent traditional discourse of gentlemen and
         virtuous ladies.
 
-        #twitter-block
-          %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
-          :javascript
-            new TWTR.Widget({
-              version: 2,
-              type: 'search',
-              search: 'ampblock',
-              interval: 30000,
-              title: 'Goings-on about the town',
-              subject: 'Refined Twitterings regarding The &Block Party',
-              width: 800,
-              height: 100,
-              theme: {
-                shell: {
-                  background: '#8ec1da',
-                  color: '#ffffff'
-                },
-                tweets: {
-                  background: '#ffffff',
-                  color: '#444444',
-                  links: '#1985b5'
-                }
+      #twitter-block
+        %script{ :src => "http://widgets.twimg.com/j/2/widget.js"}
+        :javascript
+          new TWTR.Widget({
+            version: 2,
+            type: 'search',
+            search: 'ampblock',
+            interval: 30000,
+            title: 'Goings-on about the town',
+            subject: 'Refined Twitterings regarding The &Block Party',
+            width: 700,
+            height: 100,
+            theme: {
+              shell: {
+                background: '#8ec1da',
+                color: '#ffffff'
               },
-              features: {
-                scrollbar: false,
-                loop: true,
-                live: true,
-                hashtags: true,
-                timestamp: true,
-                avatars: true,
-                toptweets: true,
-                behavior: 'default'
+              tweets: {
+                background: '#ffffff',
+                color: '#444444',
+                links: '#1985b5'
               }
-            }).render().start();
+            },
+            features: {
+              scrollbar: false,
+              loop: true,
+              live: true,
+              hashtags: true,
+              timestamp: true,
+              avatars: true,
+              toptweets: true,
+              behavior: 'default'
+            }
+          }).render().start();

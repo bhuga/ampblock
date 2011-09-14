@@ -15,10 +15,6 @@ body {
   /* Webkit (Chrome 11+) */
   #background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #7A6B5C 100%);
 
-  #sponsors {
-    position: absolute;
-  }
-
   #break {
     width: 100%;
     height: 81px;
@@ -123,7 +119,8 @@ body {
     }
   }
   #twitter-block {
-    width: 800px;
+    width: 700px;
+    margin: 0 auto;
   }
 
   #content {
@@ -134,16 +131,17 @@ body {
       font-family: 'IM Fell French Canon', serif;
       font-style: italic;
       font-size: 40px;
-      margin-bottom: 15px;
+      margin: 40px auto 15px auto;
+      text-align: center;
     }
 
     .answer {
-      margin-left: 40px;
       width:700px;
       font-family: 'IM Fell French Canon', serif;
       font-size: 18px;
       line-height: 33px;
       text-align: justify;
+      margin: 0 auto;
       #get-there-map {
         height: 275px;
       }

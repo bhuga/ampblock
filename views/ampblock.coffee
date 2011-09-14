@@ -1,6 +1,6 @@
 class SponsorDripper
 
-  constructor: (given, parent) ->
+  constructor: (given) ->
     defaults =
       # have to pick someone
       img: '/images/flat_stack.png'
@@ -15,8 +15,9 @@ class SponsorDripper
       contentWidth: 1024
       # how far into the content, from the right, to position the element
       right: 30
-      duration: 4000
+      duration: 15000
     @opts = $.extend({}, defaults, given)
+
     @parent = $('<div />')
     @parent.css('position', 'absolute')
     @parent.css('top', '0')
@@ -24,10 +25,6 @@ class SponsorDripper
     @parent.css('left', left)
     @parent.css('width', $(document).width() - left)
     @parent.css('height', $(document).height())
-    console.log @parent.css('width')
-    console.log @parent.css('left')
-    console.log $(document).width()
-    console.log left
     @parent.css('overflow', 'hidden')
     $('body').append(@parent)
 
@@ -50,19 +47,17 @@ class SponsorDripper
       @a.css('-moz-transform', 'rotate(' + r + 'deg)')
       @a
     , 30
-    console.log @a
     @a.css('top', @opts.top)
     margin = ($(document).width() - @opts.contentWidth) / 2
     #@a.css('left', margin + @opts.contentWidth - @opts.right)
     @a.css('display', 'block')
     target =
       top: $(document).height() + 300
-    console.log target
-    @img.animate target,
+    @a.animate target,
       duration: @opts.duration,
       complete: () =>
         clearInterval rotater
-        #@parent.remove()
+        @parent.remove()
 
 $(document).ready () ->
   loc = new google.maps.LatLng 29.948653,-90.067205
@@ -90,11 +85,13 @@ $(document).ready () ->
     height: 46
     width: 100
 
-  last_drip = 0
+  interval = 0
   $(window).scroll () ->
-    time = (new Date).getTime()
-    if time > last_drip + 5000
-      last_drip = time
-      parent = $('#sponsors')
-      dripper = new SponsorDripper(flat_stack, parent)
-      dripper.drip()
+    if $(window).scrollTop() > 800
+      if interval == 0
+        drip = ->
+          dripper = new SponsorDripper(flat_stack)
+          dripper.drip()
+        drip()
+        interval = setInterval drip, 5000
+        console.log "set a new interval" + interval

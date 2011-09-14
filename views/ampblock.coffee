@@ -94,4 +94,3 @@ $(document).ready () ->
           dripper.drip()
         drip()
         interval = setInterval drip, 5000
-        console.log "set a new interval" + interval

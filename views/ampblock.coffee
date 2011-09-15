@@ -114,7 +114,19 @@ $(document).ready () ->
 
   # TODO
   # Audiosocket
+  sponsors.push
+    img: '/images/audio_socket.png'
+    href: 'http://audiosocket.com'
+    height: 46
+    width: 100
+
   # Blue Box
+  sponsors.push
+    img: '/images/bbg_logo.png'
+    href: 'http://bluebox.net'
+    height: 41
+    width: 100
+
   # iSeatz
 
   interval = 0

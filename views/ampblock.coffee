@@ -8,7 +8,10 @@ class SponsorDripper
       height: 199
       width: 433
       z: 1001
-      rotateSpeed: 2
+      # how fast to run the rotation animation
+      rotateSpeed: 30
+      # how much to rotate per animation
+      rotateAmount: 2
       # starting top position
       top: 30
       # position on the left or right?
@@ -34,6 +37,7 @@ class SponsorDripper
     @a.css('position','absolute')
     @a.css('left',30)
     @a.css('z-index', @opts.z)
+    @a.css('display', 'none')
     @parent.append(@a)
 
     @img = $('<img src="'+@opts.img+'"/>')
@@ -45,20 +49,19 @@ class SponsorDripper
   drip: ()->
     @r = 0
     rotater = setInterval () =>
-      r = @r = (@r + @opts.rotateSpeed) % 360
+      r = @r = (@r + @opts.rotateAmount) % 360
       @a.css('rotation', r + 'deg')
       @a.css('-webkit-transform', 'rotate(' + r + 'deg)')
       @a.css('-moz-transform', 'rotate(' + r + 'deg)')
       @a
-    , 30
+    , @opts.rotateSpeed
     @a.css('top', @opts.top)
-    margin = ($(document).width() - @opts.contentWidth) / 2
-    #@a.css('left', margin + @opts.contentWidth - @opts.right)
-    @a.css('display', 'block')
+    @a.fadeIn(1000)
     target =
       top: $(document).height() + 300
     @a.animate target,
-      duration: @opts.duration,
+      duration: @opts.duration
+      queue: false
       complete: () =>
         clearInterval rotater
         @parent.remove()
@@ -87,6 +90,8 @@ $(document).ready () ->
 
   right_sponsors =
     channelWidth: 150
+    rotateSpeed: 40
+    rotateAmount: 2
 
   left_sponsors = $.extend {}, right_sponsors, { left: true}
 

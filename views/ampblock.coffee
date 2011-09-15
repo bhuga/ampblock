@@ -131,15 +131,17 @@ $(document).ready () ->
 
   interval = 0
   $(window).scroll () ->
-    if $(window).scrollTop() > 800
-      if interval == 0
-        drip = (defaults) ->
-          sponsor = $.extend({}, defaults, sponsors[Math.floor(Math.random() * sponsors.length)])
-          dripper = new SponsorDripper sponsor
-          dripper.drip()
-        drip(right_sponsors)
-        interval = setInterval drip, 5000, right_sponsors
-        setTimeout =>
-          drip(left_sponsors)
-          setInterval drip, 5000, left_sponsors
-        , 2500
+    # picked arbitrarily to get mobile browsers.
+    if $(window).width() > 700
+      if $(window).scrollTop() > 800
+        if interval == 0
+          drip = (defaults) ->
+            sponsor = $.extend({}, defaults, sponsors[Math.floor(Math.random() * sponsors.length)])
+            dripper = new SponsorDripper sponsor
+            dripper.drip()
+          drip(right_sponsors)
+          interval = setInterval drip, 5000, right_sponsors
+          setTimeout =>
+            drip(left_sponsors)
+            setInterval drip, 5000, left_sponsors
+          , 2500

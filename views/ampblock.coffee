@@ -4,32 +4,35 @@ class SponsorDripper
     defaults =
       # have to pick someone
       img: '/images/flat_stack.png'
-      href: 'http://flatstack.com'
+      href: '#'
       height: 199
       width: 433
       z: 1001
       rotateSpeed: 2
       # starting top position
       top: 30
-      # content width for calculating right position
-      contentWidth: 1024
-      # how far into the content, from the right, to position the element
-      right: 30
-      duration: 15000
+      # position on the left or right?
+      left: false
+      duration: 25000
+      # how many pixels wide the tranch on the right side of the screen should be
+      channelWidth: 150
     @opts = $.extend({}, defaults, given)
 
+    # we'd add some triggers to move this div around on resize if someone were paying us.
     @parent = $('<div />')
     @parent.css('position', 'absolute')
     @parent.css('top', '0')
-    left = ($(document).width() - @opts.contentWidth) / 2 + @opts.contentWidth - @opts.right
+    left = if @opts.left then 0 else $(window).width() - @opts.channelWidth
+
     @parent.css('left', left)
-    @parent.css('width', $(document).width() - left)
+    @parent.css('width', @opts.channelWidth)
     @parent.css('height', $(document).height())
     @parent.css('overflow', 'hidden')
     $('body').append(@parent)
 
     @a = $('<a href="'+ @opts.href + '" />')
     @a.css('position','absolute')
+    @a.css('left',30)
     @a.css('z-index', @opts.z)
     @parent.append(@a)
 
@@ -80,17 +83,51 @@ $(document).ready () ->
     if status == google.maps.DirectionsStatus.OK
       toDirs.setDirections(response)
 
-  flat_stack =
+
+  right_sponsors =
+    channelWidth: 150
+
+  left_sponsors = $.extend {}, right_sponsors, { left: true}
+
+  sponsors = []
+
+  # Flat Stack
+  sponsors.push
     img: '/images/flat_stack.png'
+    href: 'http://flatsourcing.com/'
     height: 46
     width: 100
+
+  # GitHub
+  sponsors.push
+    img: '/images/octocat.png'
+    href: 'http://github.com'
+    height: 80
+    width: 80
+
+  # Engine Yard
+  sponsors.push
+    img: '/images/engineyard.png'
+    href: 'http://engineyard.com'
+    height: 100
+    width: 61
+
+  # TODO
+  # Audiosocket
+  # Blue Box
+  # iSeatz
 
   interval = 0
   $(window).scroll () ->
     if $(window).scrollTop() > 800
       if interval == 0
-        drip = ->
-          dripper = new SponsorDripper(flat_stack)
+        drip = (defaults) ->
+          sponsor = $.extend({}, defaults, sponsors[Math.floor(Math.random() * sponsors.length)])
+          dripper = new SponsorDripper sponsor
           dripper.drip()
-        drip()
-        interval = setInterval drip, 5000
+        drip(right_sponsors)
+        interval = setInterval drip, 5000, right_sponsors
+        setTimeout =>
+          drip(left_sponsors)
+          setInterval drip, 5000, left_sponsors
+        , 2500

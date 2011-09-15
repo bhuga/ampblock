@@ -39,6 +39,7 @@ class SponsorDripper
     @img = $('<img src="'+@opts.img+'"/>')
     @img.css('height', @opts.height)
     @img.css('width', @opts.width)
+    @img.css('border', 'none')
     @a.append(@img)
 
   drip: ()->

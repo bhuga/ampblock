@@ -118,7 +118,6 @@ $(document).ready () ->
     height: 100
     width: 61
 
-  # TODO
   # Audiosocket
   sponsors.push
     img: '/images/audio_socket.png'
@@ -134,6 +133,11 @@ $(document).ready () ->
     width: 100
 
   # iSeatz
+  sponsors.push
+    img: '/images/iseatz.png'
+    href: 'http://iseatz.com'
+    height: 46
+    width: 100
 
   interval = 0
   $(window).scroll () ->

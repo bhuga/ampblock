@@ -1,6 +1,10 @@
-$:.unshift "lib"
-
 require "bundler/setup"
-require "amp/block"
+require "rack/rewrite"
 
-run Amp::Block
+use Rack::Rewrite do
+  rewrite "/", "/index.html"
+end
+
+use Rack::ETag
+use Rack::Static, :urls => %w(/), :root => "public"
+run Rack::Directory.new("public")

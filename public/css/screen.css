@@ -16,8 +16,6 @@ article h2 {
 }
 
 article p {
-    font-size     : 18px;
-    line-height   : 33px;
     margin-bottom : 18px;
     text-align    : justify;
 }
@@ -28,6 +26,8 @@ b {
 
 body {
     font-family : "IM Fell French Canon", serif;
+    font-size   : 18px;
+    line-height : 33px;
 }
 
 footer {
@@ -41,6 +41,100 @@ footer {
 header {
     text-align: center;
     position: relative;
+}
+
+header section {
+    margin   : 0 auto;
+    position : relative;
+}
+
+header .content {
+    margin   : 0 auto;
+    position : relative;
+    width    : 1024px;
+}
+
+#culprit {
+    height             : 81px;
+    box-shadow         : 0px 1px 4px 2px #eee;
+    -moz-box-shadow    : 0px 1px 4px 2px #eee;
+    -webkit-box-shadow : 0px 1px 4px 2px #eee;
+}
+
+#name-left, #name-right {
+    position : absolute;
+    top      : 25px;
+}
+
+#name-left {
+    left: 250px;
+}
+
+#name-right {
+    left: 595px;
+}
+
+#presentation {
+    height      : 142px;
+    line-height : 94px;
+    margin-top  : 3px;
+    width       : 800px;
+}
+
+#presentation img {
+    vertical-align: bottom;
+}
+
+#flair-left, #flair-right {
+    position : absolute;
+    top      : 0;
+}
+
+#flair-left {
+    left: 0;
+}
+
+#flair-right {
+    right: 0;
+}
+
+#invitation {
+    margin-top: 18px;
+}
+
+#dapper-left, #dapper-right {
+    position : absolute;
+    top      : 0;
+}
+
+#dapper-left {
+    left: 180px;
+}
+
+#dapper-right {
+    right: 180px;
+}
+
+#invitation p {
+    margin: 0 auto;
+    font-style: italic;
+    width: 640px;
+}
+
+#teasers {
+    margin: 56px auto;
+}
+
+#teasers img {
+    border: 10px solid #e1e0e0;
+}
+
+#teasers li {
+    display          : inline-block;
+    font-size        : 16px;
+    font-style       : italic;
+    line-height      : 18px;
+    width            : 320px;
 }
 
 i {

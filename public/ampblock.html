@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <img id="tldr" src="/img/tldr.png">
+
     <header>
       <section id="culprit">
         <div class="content">
@@ -144,6 +146,14 @@
         attendees of the rubyologists&rsquo; symposium.
       </p>
 
+      <p>
+        <b>However,</b> to ensure your immediate identification and
+        acceptance, please ensure the ready availability of your
+        conference credentials or official badgery. Hallway-track and
+        unofficial attendees should
+        contact <a href="http://twitter.com/jbarnette">@jbarnette</a>.
+      </p>
+
       <a name="sponsors"><h2>Magnificent sponsors?</h2></a>
 
       <p>
@@ -180,7 +190,7 @@
         and decent methods of traditional discourse preferred by all
         virtuous ladies and gentlemen. Should you wish to add your
         voice to the conversation, use of the <b>#ampblock</b> hashtag
-        is recommended.
+        is heartily encouraged.
       </p>
 
       <div id="twitter">
@@ -213,7 +223,7 @@
 
     <footer>
       <p>
-        Delightful logo, design, and wordsmithing
+        Delightful logo, design, and wordsmithery
         from <a href="http://twitter.com/bhuga">@bhuga</a>,
         <a href="http://twitter.com/notjoeellis">@notjoeellis</a>,
         and <a href="http://twitter.com/kbarnette">@kbarnette</a>.
@@ -225,6 +235,36 @@
       &lsquo;pon whose shoulders blame ultimately rests.
       </p>
     </footer>
+
+    <section id="tldr-copy" style="display:none">
+      <p>
+        <b>Rubyists</b>, we made you a block party. It's Thursday, 29
+        September, from 6:30 PM &lsquo;til 10, on Girod between Camp
+        and Magazine in New Orleans. We'll probably go out afterward
+        too.
+      <p>
+
+      <p>
+        We'll
+        have <a href="http://www.lagniappebrassband.com">Lagniappe
+        Brass Band</a>, <a href="http://mynameisjohnmichael.com">My
+        Name is John Michael</a>, and a DJ playing music. Food and
+        booze (beer and pitcher cocktails) will be provided
+        by <a href="http://www.capdevillenola.com">Capdeville</a>, and
+        they're right around the corner if we want extras. Expect
+        comfy outdoor chairs, tables, and couches.
+      </p>
+
+      <p>
+        Bring your conference badge to get food and drinks, or
+        contact <a href="http://twitter.com/jbarnette">@jbarnette</a>
+        to make other arrangements.
+      </p>
+
+      <p>
+        Miss this at your own peril.
+      </p>
+    </section>
 
     <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
@@ -261,6 +301,12 @@
         router.route(routing, function(res, status) {
           if (google.maps.DirectionsStatus.OK == status)
             directions.setDirections(res)
+        })
+
+        $("#tldr").click(function() {
+          $("body > *:not(#tldr-copy)").fadeOut(function() {
+            $("#tldr-copy").fadeIn()
+          })
         })
       })
     </script>

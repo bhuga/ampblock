@@ -156,6 +156,31 @@ sup {
     height: 300px;
 }
 
+#tldr {
+   cursor   : pointer;
+   height   : 141px;
+   position : fixed;
+   right    : 0;
+   top      : 0;
+   width    : 141px;
+   z-index  : 9;   
+}
+
+#tldr-copy {
+    width: 512px;
+    margin: 128px auto;
+    border: 1px dotted #ccc;
+    padding: 18px;
+}
+
+#tldr-copy p {
+    margin-bottom: 18px;
+}
+
+#tldr-copy p:last-child {
+    margin-bottom: 0;
+}
+
 .sponsor-logos li {
     float         : left;
     height        : 112px;

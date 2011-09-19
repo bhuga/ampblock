@@ -146,14 +146,11 @@ sup {
     vertical-align : super;
 }
 
-#map-container {
+#map {
     background-color : white;
     border           : 1px dotted #666;
+    height           : 296px;
     padding          : 3px;
-}
-
-#map {
-    height: 300px;
 }
 
 #tldr {

@@ -294,6 +294,12 @@
             $("#tldr-copy").fadeIn()
           })
         })
+
+        $("#tldr-copy").click(function() {
+          $("body > *:not(#tldr-copy)").fadeIn(function() {
+            $("#tldr-copy").fadeOut()
+          })
+        })
       })
     </script>
   </body>

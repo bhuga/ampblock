@@ -135,7 +135,11 @@
       </p>
 
       <div id="map-container">
-        <div id="map"></div>
+        <div id="map">
+          <a href="http://g.co/maps/a6q4n">
+            <img src="/img/ye_olde_google_map.png" alt="Camp &amp; Girod" />
+          </a>
+        </div>
       </div>
 
       <h2>What shall I bring?</h2>
@@ -270,47 +274,6 @@
 
     <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
-    </script>
-
-    <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-
-    <script type="text/javascript">
-      $(function() {
-        var options = {
-          center    : new google.maps.LatLng(29.948653,-90.067205),
-          mapTypeId : google.maps.MapTypeId.ROADMAP,
-          zoom      : 15
-        }
-      
-        var element    = $("#map")[0]
-        var map        = new google.maps.Map(element, options)
-        var router     = new google.maps.DirectionsService()
-        var directions = new google.maps.DirectionsRenderer()
-      
-        directions.setMap(map)
-      
-        origin = "Astor Crowne Plaza New Orleans Hotel, " +
-          "739 Canal Street, New Orleans, LA 70130"
-      
-        routing = {
-          destination : "Camp at Girod",
-          origin      : origin,
-          travelMode  : google.maps.DirectionsTravelMode.WALKING
-        }
-      
-        router.route(routing, function(res, status) {
-          if (google.maps.DirectionsStatus.OK == status)
-            directions.setDirections(res)
-        })
-
-        $("#tldr").click(function() {
-          $("body > *:not(#tldr-copy)").fadeOut(function() {
-            $("#tldr-copy").fadeIn()
-          })
-        })
-      })
     </script>
 
     <script type="text/javascript">

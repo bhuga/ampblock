@@ -289,6 +289,14 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(t, s);
       })();
+
+      $(function() {
+        $("#tldr").click(function() {
+          $("body > *:not(#tldr-copy)").fadeOut(function() {
+            $("#tldr-copy").fadeIn()
+          })
+        })
+      })
     </script>
   </body>
 </htm>
